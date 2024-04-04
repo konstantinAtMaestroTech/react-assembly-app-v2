@@ -4,7 +4,7 @@ import './HintModal.css';
 const HintModal = ({ handleClose, show, buttonText}) => {
 
     const showHideClassName = show ? "modal display-block" : "modal display-none";
-    const imgSource = `/files/${buttonText}.jpeg`;
+    const imgSource = `/files/${buttonText}.jpg`;
     const defaultSource = `/files/default.png`;
     const [fileExists, setFileExists] = useState(false);
 
