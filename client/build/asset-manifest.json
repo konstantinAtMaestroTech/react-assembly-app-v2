@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c83e1ae1.css",
+    "main.js": "/static/js/main.248ded47.js",
+    "static/js/451.a531d92b.chunk.js": "/static/js/451.a531d92b.chunk.js",
+    "static/js/453.26475b22.chunk.js": "/static/js/453.26475b22.chunk.js",
+    "index.html": "/index.html",
+    "static/media/Maestro_logo.svg": "/static/media/Maestro_logo.332ab6dba92d5a9cf6faf09e8de5660b.svg",
+    "main.c83e1ae1.css.map": "/static/css/main.c83e1ae1.css.map",
+    "main.248ded47.js.map": "/static/js/main.248ded47.js.map",
+    "451.a531d92b.chunk.js.map": "/static/js/451.a531d92b.chunk.js.map",
+    "453.26475b22.chunk.js.map": "/static/js/453.26475b22.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c83e1ae1.css",
+    "static/js/main.248ded47.js"
+  ]
+}
