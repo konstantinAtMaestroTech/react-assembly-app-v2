@@ -22,14 +22,17 @@ export default function Viewer({setSelectedId, selectedId, showDetail}){
   },[selectedId]);
 
   return(
-      <div style={{position:'absolute', width:'95%', height:'75%'}} id='viewerDiv'>
-          {selectedId.map((id, index) => 
-              <Icon
-                    key={index}
-                    showDetail={showDetail} 
-                    selectedId={id}>
-              </Icon>
-          )}
+      <div className='viewerDiv' style={{position:'absolute', top: '0', width:'98%'}} id='viewerDiv'>
+        <div id="loadingBanner" className="loading-banner">
+            <img src="./Maestro_Loading.gif" alt="Loading..." style={{ height: '100%', objectFit: 'contain'}} />
+        </div>
+        {selectedId.map((id, index) => 
+            <Icon
+                key={index}
+                showDetail={showDetail} 
+                selectedId={id}>
+            </Icon>
+        )}
       </div>
   );
 };

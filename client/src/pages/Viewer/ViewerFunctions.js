@@ -41,6 +41,8 @@ function launchViewer(div, urn, setSelectedId, paramValue){
                     Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT
                   ]
                 );
+                var loadingBanner = document.getElementById('loadingBanner');
+                loadingBanner.style.display = 'none';
                 if (paramValue) {
                     viewer.search(paramValue, function(dbId) {
                         console.log('dbid in the function: ', dbId)
@@ -233,6 +235,16 @@ export function groupSelector(paramValue, setSelectedId) { // One selection func
             viewer.search(paramValue, function(dbId) {
                 setSelectedId(dbId);
                 viewer.showAll();
+                viewer.fitToView();
+            }, function (err) {
+                console.error('Error occured during search: ', err);
+            });
+        } else if (paramValue.includes('!')) { // The behaviour is not uniform across the options (some select the elements others no)
+            paramValue = paramValue.replace('!', '');
+            viewer.search(paramValue, function(dbId) {
+                setSelectedId([]);
+                viewer.showAll();
+                viewer.hide(dbId);
                 viewer.fitToView();
             }, function (err) {
                 console.error('Error occured during search: ', err);

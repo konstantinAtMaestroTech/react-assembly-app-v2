@@ -5,6 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function handleTouchMove(event) {
+  if (window.matchMedia("(orientation: portrait)").matches) {
+    event.preventDefault();
+  }
+}
+
+window.addEventListener('touchmove', handleTouchMove, { passive: false });
+
 root.render(
   <React.StrictMode>
     <App />

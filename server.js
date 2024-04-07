@@ -46,6 +46,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
-})
+app.listen(PORT, '192.168.1.180', () => {
+    console.log(`Server is running on 192.168.1.180:${PORT}.`);
+});

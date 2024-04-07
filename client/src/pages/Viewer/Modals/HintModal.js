@@ -25,7 +25,7 @@ const HintModal = ({ handleClose, show, buttonText}) => {
     <div className={showHideClassName}>
         <section className="HintModal-main">
         {fileExists ? (
-            <img src={imgSource} alt="Default GIF" style={{ width: '100%', height: '100%', objectFit: 'contain' }}/>
+            <img src={imgSource} alt="Default GIF" style={{ width: '100%', height: '100%', objectFit: 'contain'}}/>
         ) : (
             <img src={defaultSource} alt="Default GIF" style={{ width: '100%', height: '100%', objectFit: 'contain' }}/>
         )}

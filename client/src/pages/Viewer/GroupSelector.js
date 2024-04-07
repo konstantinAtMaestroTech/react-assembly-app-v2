@@ -10,8 +10,9 @@ export default function GroupSelector ({setSelectedId}){ // Needs to be fixed to
 
     return (
         <div className='GroupSelector'>
-            <select className='selector' onClick={handleClick} defaultValue="">
+            <select className='selector' onChange={handleClick} defaultValue="">
                 <option value="">All Phases</option>
+                <option value="!Wall">Pavilion</option>
                 <option value="M_B">Base Structure</option>
                 <option value="W_R">Ribs</option>
                 <option value="W_P">Petals</option>
